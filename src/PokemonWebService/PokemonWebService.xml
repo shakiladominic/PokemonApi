@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PokemonWebService</name>
+    </assembly>
+    <members>
+        <member name="T:PokemonWebService.Controllers.PokemonController">
+            <summary>
+            Controller to get Pokemon details(basic and translated descriptions).
+            </summary>
+        </member>
+        <member name="M:PokemonWebService.Controllers.PokemonController.#ctor(PokemonDomain.Handlers.IPokemonHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PokemonWebService.Controllers.PokemonController"/> class.
+            </summary>
+            <param name="pokemonHandler">Pokemon Handler.</param>
+        </member>
+        <member name="M:PokemonWebService.Controllers.PokemonController.GetDetails(System.String)">
+            <summary>
+            Get Endpoint to return basic pokemon details.
+            </summary>
+            <param name="name">Pokemon name.</param>
+            <returns>Name, Description, Habitat and Legendary status.</returns>
+        </member>
+        <member name="M:PokemonWebService.Controllers.PokemonController.GetTranslatedDetails(System.String)">
+            <summary>
+            Get Endpoint to return fun translated pokemon details.
+            </summary>
+            <param name="name">Pokemon name.</param>
+            <returns>Name, Translated Description, Habitat and Legendary status.</returns>
+        </member>
+        <member name="T:PokemonWebService.ErrorHandlingMiddleware">
+            <summary>
+            Middleware to handle custom and default errors.
+            </summary>
+        </member>
+        <member name="T:PokemonWebService.Startup">
+            <summary>
+            Configure required services for PokemonWebservice.
+            </summary>
+        </member>
+        <member name="M:PokemonWebService.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PokemonWebService.Startup"/> class.
+            </summary>
+            <param name="configuration">Configuration class.</param>
+        </member>
+    </members>
+</doc>
